@@ -1,0 +1,700 @@
+/* CSS Document */
+body {
+	background-color: #190723;
+	margin:0;
+	padding:0;
+	font-family:Arial, Helvetica, sans-serif;
+}
+#form1 {
+	width:100%;
+	float:left;
+	margin:20px 0 0;
+	padding:0;
+}
+.searchform {
+	background-color: rgba(12, 167, 198, 0.94);
+	float: left;
+	height: auto;
+	overflow: hidden;
+	padding:40px 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+.container {
+	display: block;
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 768px;
+	padding: 0 33px;
+	width: auto;
+}
+.form _flights {
+	float:left;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+.inputs {
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.inputs .input {
+	display: table-cell;
+	position: relative;
+	vertical-align: middle;
+	float: left;
+}
+.ui-geolocate {
+	background-color: white;
+	color: black;
+	display: block;
+	position: relative;
+}
+.ui-geolocate {
+	background-color: white;
+	color: black;
+	display: block;
+	position: relative;
+}
+.ui-invalid-text {
+	background-color: #a8252e;
+	bottom: 100%;
+	color: white;
+	display: block;
+	font-size: 11px;
+	font-weight: 400;
+	left: 3px;
+	letter-spacing: 0.25px;
+	line-height: 12px;
+	margin-bottom: -3px;
+	opacity: 0;
+	padding: 4px 6px 5px;
+	position: absolute;
+	transform: translate3d(0px, -15px, 0px);
+	transition: all 120ms ease 0s;
+	visibility: hidden;
+	z-index: 3;
+}
+.input._origin .ui-geolocate input, .input._destination .ui-geolocate input {
+	padding-left: 34px;
+}
+input[type="text"], body input[type="email"] {
+	border: 1px solid #b3b3b3;
+}
+.ui-geolocate input {
+	background-color: transparent;
+	border: 2px solid white !important;
+	border-radius: 0;
+	box-sizing: border-box;
+	color: inherit;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	height: 38px;
+	line-height: 20px;
+	margin: 0;
+	outline: 0 none;
+	overflow: hidden;
+	padding: 0 8px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+.input._swap {
+	color: white;
+	float: left;
+	text-align: center;
+	width: 40px;
+	height: 1px;
+}
+.ui-invalid-text {
+	background-color: #a8252e;
+	bottom: 100%;
+	color: white;
+	display: block;
+	font-size: 11px;
+	font-weight: 400;
+	left: 3px;
+	letter-spacing: 0.25px;
+	line-height: 12px;
+	margin-bottom: -3px;
+	opacity: 0;
+	padding: 4px 6px 5px;
+	position: absolute;
+	transform: translate3d(0px, -15px, 0px);
+	transition: all 120ms ease 0s;
+	visibility: hidden;
+	z-index: 3;
+}
+.input._dates {
+	margin-left: 20px;
+	padding: 0 10px;
+}
+.input._date-depart {
+	display: inline;
+	float: left;
+	margin: 0 10px 0 0;
+	padding-right: 1px;
+}
+.input._date-return {
+	display: inline;
+	float: left;
+}
+.input._date-depart .ui-calendar input, .input._date-return .ui-calendar input, .input._date-pickup .ui-calendar input, .input._date-dropoff .ui-calendar input, .input._date .ui-calendar input, .input._date-depart .ui-calendar .label, .input._date-return .ui-calendar .label, .input._date-pickup .ui-calendar .label, .input._date-dropoff .ui-calendar .label, .input._date .ui-calendar .label {
+	padding-left: 34px;
+	padding-right: 0;
+	font-weight: bold;
+}
+.ui-calendar > .label {
+	bottom: 0;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	left: 0;
+	line-height: 38px;
+	overflow: hidden;
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	text-overflow: ellipsis;
+	top: 0;
+	white-space: nowrap;
+}
+.ui-calendar input {
+	background-color: transparent;
+	border: 0 none;
+	box-sizing: border-box;
+	color: inherit;
+	cursor: pointer;
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	height: 38px;
+	line-height: 20px;
+	margin: 0;
+	outline: 0 none;
+	padding: 0 10px;
+	position: relative;
+	width: 100%;
+}
+.ui-calendar {
+	background-color: white;
+	color: black;
+	display: block;
+	position: relative;
+	text-align: left;
+}
+input[type="text"] {
+	background-color: white;
+	font-size: 13px;
+	font-weight: 600;
+}
+input[type="text"], input[type="email"] {
+	border: 1px solid #ededed;
+	cursor: text;
+	font-weight: bold;
+	padding: 4px 5px;
+}
+.input._passengers {
+	width: 16%;
+}
+.input._passengers .ui-paxselect-button {
+	width: 100%;
+}
+.ui-paxselect-button {
+	background-color: white;
+	box-sizing: border-box;
+	color: black;
+	cursor: pointer;
+	display: block;
+	height: 38px;
+	outline: 0 none;
+	padding-top: 9px;
+	position: relative;
+}
+.ui-paxselect-label {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	padding-left: 34px;
+}
+.submit-container .submit {
+	top: -9px;
+}
+.submit-container .submit {
+	background-color: #fe5766;
+	border: 0 none;
+	border-radius: 86px;
+	box-shadow: 0 0 0.001px 6px rgba(0, 0, 0, 0.15);
+	color: white;
+	cursor: pointer;
+	display: block;
+	height: 86px;
+	outline: 0 none;
+	overflow: hidden;
+	position: absolute;
+	right: 200px;
+	text-decoration: none;
+	top: 16px;
+	transition: background-color 400ms ease 0s, box-shadow 600ms ease 0s;
+	width: 86px;
+	z-index: 1;
+}
+.submit-container .submit:hover, .submit-container .submit:focus {
+	background-color: #fe707d;
+	box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.05);
+}
+.submit-container .submit > span::before {
+ background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.66) 0px, rgba(255, 255, 255, 0.66) 60%, rgba(255, 255, 255, 0.8) 66%, rgba(255, 255, 255, 0.8) 70%, white 73%, rgba(255, 255, 255, 0) 73%, rgba(255, 255, 255, 0) 100%);
+ content: "";
+ display: block;
+ height: 300%;
+ left: -250%;
+ opacity: 1;
+ position: absolute;
+ top: -200%;
+ width: 300%;
+ z-index: 1;
+}
+.submit-container .submit > span {
+	border-radius: inherit;
+	height: inherit;
+	left: 0;
+	position: absolute;
+	top: -7px;
+	width: inherit;
+}
+.submit-container .submit .label {
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 42px;
+	text-align: center;
+	width: 86px;
+}
+.result-box-inner {
+	float: left;
+	width: 100%;
+	margin: 40px 0 0;
+	padding: 0;
+	position: relative;
+}
+.resultblock {
+	background: #fff none repeat scroll 0 0;
+	float: left;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.result-details {
+	background-color: #f4f7f8;
+}
+.result-details, .ticketinfo {
+}
+.segments {
+}
+.segment:first-child {
+	margin-top: 0;
+}
+.segment {
+	background-color: #f4f7f8;
+	border-bottom: 1px solid #e3e6e7;
+	margin-top: 1px;
+	padding: 24px 0 12px;
+	position: relative;
+}
+.segment-inner {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.segment-inner .airlines {
+	background-position: right center;
+	font-size: 0;
+	line-height: 0;
+	padding: 0;
+	text-align: center;
+	width: 68px;
+}
+.segment-inner .airlines, .segment-inner .departure, .segment-inner .duration, .segment-inner .destination {
+	background-image: url(../images/dot.png);
+	background-repeat: repeat-y;
+	display: table-cell;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+.segment-inner .airlines .names {
+	display: block;
+	font-size: 9px;
+	font-weight: 600;
+	left: 0;
+	line-height: 12px;
+	opacity: 0.7;
+	padding-left: 10px;
+	padding-top: 7px;
+	position: absolute;
+	top: 0;
+}
+.segment-inner .airlines ul {
+	height: 48px;
+	list-style: outside none none;
+	margin: 0 10px;
+	padding: 0;
+	position: relative;
+	width: 48px;
+	z-index: 20;
+}
+.segment-inner .airlines ul li {
+	display: block;
+}
+.segment-inner .airlines img {
+	border: 0 none;
+	height: 48px;
+	outline: 0 none;
+	width: 48px;
+}
+.segment-inner .departure {
+	background-position: right center;
+	text-align: right;
+	float:left;
+}
+.segment-inner .departure .inner {
+	background-position: left center;
+}
+.segment-inner .departure .inner, .segment-inner .destination .inner {
+	background-image: none;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.segment-inner .iata-time {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 21px;
+}
+.segment-inner .departure .inner .iata-time .iata {
+	margin-right: 5px;
+}
+.segment-inner .iata-time .time {
+	font-weight: 700;
+}
+.segment-inner .iata-time .time .am::before {
+ content: "";
+}
+.segment-inner .iata-time .time .am, .segment-inner .iata-time .time .pm {
+	display: inline-block;
+	font-size: 0;
+	height: 20px;
+	line-height: 0;
+	margin-left: -2px;
+	text-transform: uppercase;
+	vertical-align: top;
+	width: 20px;
+}
+.segment-inner .location {
+	font-size: 11px;
+	font-weight: 400;
+	line-height: 15px;
+}
+.segment-inner .departure {
+	text-align: left;
+}
+.segment-inner .duration {
+	background-image: none;
+	text-align: center;
+	width: 110px;
+	float: left;
+}
+.result-box .segment-inner .travel-time {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	margin-bottom: -2px;
+}
+.travel-stops._0 .stops {
+	color: #0ca7c6;
+}
+.result-box .travel-stops .stops {
+	color: #837e8f;
+	display: table;
+	font-family: "momicons";
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 12px;
+	line-height: 1;
+	margin: 3px 0;
+	table-layout: fixed;
+	text-decoration: none;
+	text-transform: none;
+	width: 100%;
+}
+.result-box .travel-stops .total {
+	color: #54515c;
+	display: block;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 14px;
+	margin-top: -2px;
+	text-transform: uppercase;
+}
+.travel-stops._0 .total {
+	color: #097d94;
+}
+.result-box .segment-inner .destination {
+	background-position: left center;
+	text-align: left;
+	float:left;
+}
+.result-details {
+	float: left;
+	width: 70%;
+}
+.result-box .ticketinfo {
+	width: 30%;
+	float:left;
+}
+.result-box .ticketinfo > .inner {
+	height: 100%;
+	float:left;
+	padding:0 30px;
+}
+.result-box .ticketinfo .floater {
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+.result-box .prices {
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+.result-box .prices .price-total, .result-box .prices .price-pax {
+	font-size: 30px;
+	position: relative;
+	float: left;
+	clear: both;
+}
+.result-box .prices .price-total .price, .result-box .prices .price-pax .price {
+	clear: both;
+	float: left;
+	font-size: 30px;
+	line-height: 0;
+	position: relative;
+}
+.price {
+	float: left;
+}
+.value {
+	float: left;
+}
+.result-box .ticketinfo .trip-cta .button {
+	-moz-appearance: none;
+	background-color: #569610;
+	background-image: -moz-linear-gradient(center bottom, #1f841c 0px, #58a532 100%);
+	border: 0 none;
+	border-radius: 0;
+	box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.5);
+	color: white;
+	cursor: pointer;
+	display: inline-table;
+	font-family: inherit;
+	font-size: 14px;
+	font-weight: 400;
+	height: 34px;
+	line-height: 34px;
+	margin: 0;
+	outline: 0 none;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+	transition: all 200ms ease-out 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+	width: 100%;
+}
+.result-box .ticketinfo .trip-cta .select, .result-box .ticketinfo .trip-cta .share {
+	display: table-cell;
+	padding: 5px 10px 10px;
+	vertical-align: bottom;
+}
+.result-box .ticketinfo .trip-cta .button .label {
+	display: table-cell;
+	font-size: 16px;
+	font-weight: 600;
+	left: 0;
+	line-height: 20px;
+	padding: 7px 20px;
+	position: relative;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+	top: 0;
+	vertical-align: middle;
+	width: 100%;
+}
+.trip-cta {
+	clear: both;
+	float: left;
+}
+
+
+@media (max-width:767px) {
+	.container {
+  display: block;
+  float: left;
+  margin: 0;
+  max-width: 100%;
+  min-width: 0;
+  padding: 0 10%;
+  width: 80%;
+}
+.input._route {
+  float: left;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.input._dates {
+  margin: 0 0 20px 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+}
+.inputs .input {
+  width: 100%;
+}
+.submit-container {
+clear: both;
+float: left;
+margin: 30px 0 0 30px;
+}
+.submit-container .submit {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.result-box .prices .price-total, .result-box .prices .price-pax {
+  font-size: 20px;
+}
+.segment-inner .duration {
+  background-image: none;
+  clear: both;
+  float: left;
+  margin: 20px 0;
+  text-align: center;
+  width: auto;
+}
+.result-details {
+  float: left;
+  width: 100%;
+}
+.segment-inner .departure {
+  background-position: right center;
+  float: left;
+  text-align: right;
+  width: 90%;
+  padding: 0 5%;
+  text-align: center;
+}
+.segment-inner .departure .inner {
+  background-position: left center;
+  text-align: center;
+}
+.result-box .segment-inner .destination {
+  background-position: left center;
+  float: left;
+  text-align: left;
+  width: 90%;
+  padding: 0 5%;
+}
+.segment-inner .departure .inner, .segment-inner .destination .inner {
+  text-align: center;
+}
+.result-box .ticketinfo .floater {
+  float: left;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+.result-box .ticketinfo {
+  float: left;
+  width: 100%;
+}
+.result-box .ticketinfo > .inner {
+  float: left;
+  height: auto;
+  padding: 10px 0;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.result-box .prices .price-total, .result-box .prices .price-pax {
+  clear: both;
+  float: left;
+  font-size: 30px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.result-box .prices {
+  float: left;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+.trip-cta {
+  clear: both;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+.trip-cta .select {
+  display: table !important;
+  float: none;
+  margin: 0 auto;
+}
+}
+
+.center {
+    margin-top:50px;   
+}
+
+.modal-header {
+	padding-bottom: 5px;
+}
+
+.modal-footer {
+    	padding: 0;
+	}
+    
+.modal-footer .btn-group button {
+	height:40px;
+	border-top-left-radius : 0;
+	border-top-right-radius : 0;
+	border: none;
+	border-right: 1px solid #ddd;
+}
+	
+.modal-footer .btn-group:last-child > button {
+	border-right: 0;
+}
+
+.loginform {
+    color: white;
+    height: 50px;
+}
+
+.loginform h1 {
+    font-size: 16px;
+    vertical-align: middle;
+}
+.loginform > a {
+    color: white;
+    float: right;
+    vertical-align: middle;
+    margin-left: 10px;
+}

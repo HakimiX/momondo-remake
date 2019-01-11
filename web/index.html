@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Flight Search</title>
+        <link href="css/jquery-ui.css" rel="stylesheet" />
+        <script src="script/jquery-1.10.2.js"></script>
+        <script src="script/jquery-ui.js"></script>
+        <script type="text/javascript" src="script/bootstrap.min.js"></script>
+        <script src="script/flight.js"></script>
+        <script src="script/js.cookie.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" />
+        <style type="text/css">
+            .ui-datepicker-week-end .ui-state-default
+            {
+                border: 1px solid #d3d3d3;
+                background: #fff url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+                font-weight: normal;
+                color: red;
+            }
+
+            .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year
+            {
+                height: 25px;
+            }
+
+            .ui-widget
+            {
+                font-size: 1.3em;
+            }
+
+            .ui-datepicker
+            {
+                width: 20em;
+            }
+
+            .ui-datepicker td span, .ui-datepicker td a
+            {
+                text-align: center;
+            }
+
+            .ui-datepicker table
+            {
+                font-size: 100%;
+            }
+
+            .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next
+            {
+                top: 4px;
+            }
+
+            .ui-widget-header
+            {
+                border: 0px solid #fff;
+                background: #fff url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+                color: #222222;
+                font-weight: bold;
+            }
+
+            .ui-datepicker td
+            {
+                border: 0;
+                padding: 2px;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+                $("#from").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1,
+                    minDate: 0,
+                    dateFormat: "d MM, yy",
+                    onClose: function (selectedDate) {
+                        $("#to").datepicker("option", "minDate", selectedDate);
+                    }
+                });
+                $("#to").datepicker({
+                    defaultDate: "+1w",
+                    changeMonth: true,
+                    numberOfMonths: 1,
+                    dateFormat: "d MM, yy",
+                    onClose: function (selectedDate) {
+                        $("#from").datepicker("option", "maxDate", selectedDate);
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <form id="form1">
+            <div class="loginform">
+                <h1> Welcome <span id="loginuser">test@test.com</span></h1>
+                <a href="#" id="logout">Logout </a>
+                <a href="reservations.html" id="myreservation">My Reservations </a>
+            </div>
+            <div class="searchform">
+                <div class="container">
+                    <div class="form _flights">
+                        <div class="inputs">
+                            <div class="input _route">
+                                <div class="input _origin">
+                                    <div class="ui-geolocate">
+                                        <div class="ui-invalid-text"></div>
+                                        <input type="text" placeholder="Source" value="" data-button="true" data-type="geolocate" id="source" name="" autocomplete="off" autocorrect="off" autocapitalize="off" class="ui-autocomplete-input">
+                                    </div>
+                                </div>
+                                <div class="input _swap">
+                                    <div class="swap-route"></div>
+                                </div>
+                                <div class="input _destination">
+                                    <div class="ui-geolocate">
+                                        <div class="ui-invalid-text"></div>
+                                        <input type="text" placeholder="Destination" value="" data-button="true" data-type="geolocate" id="destination" name="" autocomplete="off" autocorrect="off" autocapitalize="off" class="ui-autocomplete-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input _dates">
+                                <div class="input _date-depart">
+                                    <div class="ui-calendar">
+                                        <div class="ui-invalid-text">null</div>
+                                        <input type="text" value="25 December, 2015" data-button="true" data-type="geolocate" id="from" name="" autocomplete="off" autocorrect="off" autocapitalize="off" class="ui-autocomplete-input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input _passengers">
+                                <div class="ui-geolocate">
+                                    <div class="ui-invalid-text"></div>
+                                    <input type="text" placeholder="No of Passengers" value="" data-button="true" data-type="geolocate" id="passengers" name="" autocomplete="off" autocorrect="off" autocapitalize="off" class="ui-autocomplete-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-container"><a class="submit" href="#"><span><span class="label">Search </span></span></a></div>
+            </div>
+            <div class="result-box-inner">
+                <div class="container">
+                    <div class="resultblock result-box " id="placeholder_div" style="display:none">
+                        <div class="result-details">
+                            <div class="inner">
+                                <div class="segments">
+                                    <div class="segment segment0">
+                                        <div class="segment-inner">
+                                            <div class="airlines _1">
+                                                <div class="names">Spicejet</div>
+                                                <ul>
+                                                    <li>
+                                                        <img src="http://cdn1.momondo.net/logos/airlines/sg.png"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="departure ">
+                                                <div class="inner">
+                                                    <div class="iata-time"><span class="iata source">AMD</span> <span class="time starttime">05:20</span> </div>
+                                                    <div class="location"><span class="city"></span> </div>
+                                                </div>
+                                            </div>
+                                            <div class="duration">
+                                                <div class="travel-time">1h 15m</div>
+                                                <div title="" class="travel-stops _0"><span class="stops"></span><span class="total"></span> </div>
+                                            </div>
+                                            <div class="destination ">
+                                                <div class="inner">
+                                                    <div class="iata-time"><span class="time"><span class="am"></span></span> <span class="iata destinationName">BOM</span> </div>
+                                                    <div class="location"><span class="city"></span> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticketinfo">
+                            <div class="inner">
+                                <div class="floater">
+                                    <div class="prices">
+                                        <div class="price-pax">3,548 INR</div>
+                                    </div>
+                                    <div class="trip-cta">
+                                        <div class="select"><a id="" class="button bookbutton" onclick="book(this)"><span class="label">Book</span></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
